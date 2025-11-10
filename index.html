@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Study Guide Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<style>
+      html {
+        scroll-behavior: smooth;
+      }
+      @keyframes pulsate {
+        0%, 100% {
+          transform: scale(1);
+          filter: drop-shadow(0 0 5px #0ea5e9);
+        }
+        50% {
+          transform: scale(1.05);
+          filter: drop-shadow(0 0 15px #38bdf8);
+        }
+      }
+      @keyframes orbit {
+        from {
+          transform: rotate(0deg) translateX(45px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(45px) rotate(-360deg);
+        }
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-pulsate {
+        animation: pulsate 2.5s infinite ease-in-out;
+      }
+      .animate-orbit {
+        animation: orbit 5s linear infinite;
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+    </style>
+</head>
+  <body class="bg-slate-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
